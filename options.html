@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Smart Video Speed Controller Options</title>
+    <style>
+        body { background-color: #2c3e50; color: #ecf0f1; font-family: Arial, sans-serif; padding: 20px; }
+        .form-section { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 5px; }
+        input[type="number"], button { width: 100%; padding: 10px; border: none; border-radius: 5px; color: #ecf0f1; }
+        input[type="number"] { background-color: #34495e; }
+        input[type="checkbox"] { margin-top: 10px; transform: scale(1.5); }
+        button { background-color: #3498db; cursor: pointer; transition: background-color 0.3s ease; }
+        button:hover { background-color: #2980b9; }
+        .tooltip { position: relative; display: inline-block; border-bottom: 1px dotted #ecf0f1; }
+        .tooltip .tooltiptext { visibility: hidden; width: 500px; background-color: #f9f9f9; color: #000; text-align: center; border-radius: 6px; padding: 5px 0; position: absolute; z-index: 1; left: 50%; margin-left: -60px; bottom: 150%; opacity: 0; transition: opacity 0.3s; }
+        .tooltip:hover .tooltiptext { visibility: visible; opacity: 1; }
+        #settings-form { max-width: 600px; margin: 0 auto; }
+    </style>
+</head>
+<body>
+    <form id="settings-form">
+        <div class="form-section">
+            <h2>Keyboard Shortcuts</h2>
+            <p><strong>Increase Video Speed:</strong> Ctrl + Shift + Period</p>
+            <p><strong>Decrease Video Speed:</strong> Ctrl + Shift + Comma</p>
+            <p><strong>Activate Dynamic Speed:</strong> Ctrl + Shift + Y</p>
+            <p><strong>Jump to Preset Speed 1:</strong> Ctrl + Alt + J</p>
+            <p><strong>Jump to Preset Speed 2:</strong> Ctrl + Alt + K</p>
+            <p><strong>Jump to Preset Speed 3:</strong> Ctrl + Alt + L</p>
+        </div>
+        <div class="form-section">
+            <label for="useWPMbyDefault">Apply Target Words Per Minute Speed on Page Load (Overrides Default Speed):</label>
+            <span class="tooltip">ℹ
+                <span class="tooltiptext">Enabling this will auto-open the video's transcript and adjust playback speed to match your target WPM.</span>
+            </span>
+            <input type="checkbox" id="useWPMbyDefault" name="useWPMbyDefault">
+        </div>
+        <div class="form-section">
+            <label for="targetWPM">Target Words Per Minute:</label>
+            <span class="tooltip">ℹ
+                <span class="tooltiptext">Set your preferred listening speed. Average talking speed is ~150 WPM.</span>
+            </span>
+            <input type="number" id="targetWPM" name="targetWPM" min="20">
+        </div>
+        <div class="form-section">
+            <label for="defaultSpeed">Default Speed:</label>
+            <span class="tooltip">ℹ
+                <span class="tooltiptext">Initial playback speed for videos.</span>
+            </span>
+            <input type="number" id="defaultSpeed" name="defaultSpeed" min="0.1" step="0.1">       
+        </div>
+        <div class="form-section">
+            <label for="incrementAmount">Adjustment step size for video speed changes.:</label>
+            <span class="tooltip">ℹ
+                <span class="tooltiptext">Determines the amount by which the video speed increases or decreases when you adjust it.</span>
+            </span>
+            <input type="number" id="incrementAmount" name="incrementAmount" min="0.1" step="0.01">       
+        </div>
+        <div class="form-section">
+            <label for="preset_speed_1">Preset Speed 1:</label>
+            <span class="tooltip">ℹ
+                <span class="tooltiptext">Custom preset for quick selection of a specific playback speed. Set this to your commonly used speed for easy access.</span>
+            </span>
+            <input type="number" id="preset_speed_1" name="preset_speed_1" min="0.1" step="0.01">
+        </div>
+        <div class="form-section">
+            <label for="preset_speed_2">Preset Speed 2:</label>
+            <span class="tooltip">ℹ
+                <span class="tooltiptext">Custom preset for quick selection of a specific playback speed. Set this to your commonly used speed for easy access.</span>
+            </span>
+            <input type="number" id="preset_speed_2" name="preset_speed_2" min="0.1" step="0.01">
+        </div>
+        <div class="form-section">
+            <label for="preset_speed_3">Preset Speed 3:</label>
+            <span class="tooltip">ℹ
+                <span class="tooltiptext">Custom preset for quick selection of a specific playback speed. Set this to your commonly used speed for easy access.</span>
+            </span>
+            <input type="number" id="preset_speed_3" name="preset_speed_3" min="0.1" step="0.01">
+        </div>
+        <div class="form-section">
+            <label for="transcriptSeconds">Duration of Transcript Used to Calculate Video WPM (in seconds):</label>
+            <span class="tooltip">ℹ
+                <span class="tooltiptext">Duration (in seconds) of the transcript used for calculating WPM. Longer duration yields higher accuracy.</span>
+            </span>
+            <input type="number" id="transcriptSeconds" name="transcriptSeconds" min="20">
+        </div>
+        <button type="submit">Save</button>
+    </form>
+    <script src="options.js"></script>
+</body>
+</html>

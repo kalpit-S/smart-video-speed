@@ -1,0 +1,62 @@
+{
+    "manifest_version": 2,
+    "name": "Smart Video Speed",
+    "version": "1.0",
+    "description": "Control video playback speed on web pages using hotkeys and automatically have the speed adjust set based on words per minute of speaker in video and target words per minute.",
+    "permissions": [
+      "activeTab",
+      "tabs",
+      "storage"
+    ],
+    "commands": {
+        "increase_speed": {
+          "suggested_key": {
+            "default": "Ctrl+Shift+Period"
+          },
+          "description": "Increase Video Speed"
+        },
+        "decrease_speed": {
+          "suggested_key": {
+            "default": "Ctrl+Shift+Comma"
+          },
+          "description": "Decrease Video Speed"
+        },
+        "set_wpm": {
+          "suggested_key": {
+            "default": "Ctrl+Shift+Y"
+          },
+          "description": "Activate Dynamic Speed"
+        },
+        "preset_speed_1": {
+          "suggested_key": {
+            "default": "Ctrl+Alt+J"
+          },
+          "description": "Jump to Preset Speed 1"
+        },
+        "preset_speed_2": {
+          "suggested_key": {
+            "default": "Ctrl+Alt+K"
+          },
+          "description": "Jump to Preset Speed 2"
+        },
+        "preset_speed_3": {
+          "suggested_key": {
+            "default": "Ctrl+Alt+L"
+          },
+          "description": "Jump to Preset Speed 3"
+        }
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "options_ui": {
+      "page": "options.html",
+      "open_in_tab": true
+    },
+    "background": {
+      "scripts": ["background.js"]
+    }
+}
