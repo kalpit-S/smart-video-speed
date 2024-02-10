@@ -1,10 +1,10 @@
+# Chrome Version: https://github.com/kalpit-S/smart-video-speed-chrome
+
 # Smart Video Speed
 
 ## Overview
 
 Smart Video Speed is a versatile browser extension that provides users with the ability to control video playback speeds on any website using convenient keyboard shortcuts. Unique to YouTube videos, it features an advanced automatic speed adjustment based on the speaker's words per minute.
-
-# Chrome Version: https://github.com/kalpit-S/smart-video-speed-chrome
 
 ## Features
 
