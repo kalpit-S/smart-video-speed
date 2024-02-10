@@ -38,21 +38,21 @@
     "preset_speed_1": {
       "suggested_key": {
         "default": "Ctrl+Alt+J",
-        "mac": "Alt+Shift+I"
+        "mac": "Alt+Shift+J"
       },
       "description": "Jump to Preset Speed 1"
     },
     "preset_speed_2": {
       "suggested_key": {
         "default": "Ctrl+Alt+K",
-        "mac": "Alt+Shift+O"
+        "mac": "Alt+Shift+K"
       },
       "description": "Jump to Preset Speed 2"
     },
     "preset_speed_3": {
       "suggested_key": {
         "default": "Ctrl+Alt+L",
-        "mac": "Alt+Shift+P"
+        "mac": "Alt+Shift+L"
       },
       "description": "Jump to Preset Speed 3"
     }    
