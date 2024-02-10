@@ -1,73 +1,73 @@
 {
-    "manifest_version": 2,
-    "name": "Smart Video Speed",
-    "version": "1.0",
-    "description": "Control video playback speed on web pages using hotkeys and automatically have the speed adjust set based on words per minute of speaker in video and target words per minute.",
-    "permissions": [
-      "activeTab",
-      "tabs",
-      "storage"
-    ],
-    "icons": {
-      "16": "icon16.png",
-      "48": "icon48.png",
-      "128": "icon128.png"
-     },
-    "commands": {
-        "increase_speed": {
-          "suggested_key": {
-            "default": "Ctrl+Shift+Period",
-            "mac": "MacCtrl+Shift+Period"
-          },
-          "description": "Increase Video Speed"
-        },
-        "decrease_speed": {
-          "suggested_key": {
-            "default": "Ctrl+Shift+Comma",
-            "mac": "MacCtrl+Shift+Comma"
-          },
-          "description": "Decrease Video Speed"
-        },
-        "set_wpm": {
-          "suggested_key": {
-            "default": "Ctrl+Shift+Y",
-            "mac": "MacCtrl+Shift+Y"
-          },
-          "description": "Activate Dynamic Speed"
-        },
-        "preset_speed_1": {
-          "suggested_key": {
-            "default": "Ctrl+Alt+J",
-            "mac": "MacCtrl+Ctrl+J"
-          },
-          "description": "Jump to Preset Speed 1"
-        },
-        "preset_speed_2": {
-          "suggested_key": {
-            "default": "Ctrl+Alt+K",
-            "mac": "MacCtrl+Ctrl+K"
-          },
-          "description": "Jump to Preset Speed 2"
-        },
-        "preset_speed_3": {
-          "suggested_key": {
-            "default": "Ctrl+Alt+L",
-            "mac": "MacCtrl+Ctrl+L"
-          },
-          "description": "Jump to Preset Speed 3"
-        }
+  "manifest_version": 2,
+  "name": "Smart Video Speed",
+  "version": "1.0",
+  "description": "Control video playback speed on web pages using hotkeys and automatically have the speed adjust set based on words per minute of speaker in video and target words per minute.",
+  "permissions": [
+    "activeTab",
+    "<all_urls>",
+    "storage"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "commands": {
+    "increase_speed": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Period",
+        "mac": "Command+Shift+Period"
+      },
+      "description": "Increase Video Speed"
     },
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
-      }
-    ],
-    "options_ui": {
-      "page": "options.html",
-      "open_in_tab": true
+    "decrease_speed": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Comma",
+        "mac": "Command+Shift+Comma"
+      },
+      "description": "Decrease Video Speed"
     },
-    "background": {
-      "scripts": ["background.js"]
+    "set_wpm": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Activate Dynamic Speed"
+    },
+    "preset_speed_1": {
+      "suggested_key": {
+        "default": "Ctrl+Alt+J",
+        "mac": "Alt+Shift+I"
+      },
+      "description": "Jump to Preset Speed 1"
+    },
+    "preset_speed_2": {
+      "suggested_key": {
+        "default": "Ctrl+Alt+K",
+        "mac": "Alt+Shift+O"
+      },
+      "description": "Jump to Preset Speed 2"
+    },
+    "preset_speed_3": {
+      "suggested_key": {
+        "default": "Ctrl+Alt+L",
+        "mac": "Alt+Shift+P"
+      },
+      "description": "Jump to Preset Speed 3"
+    }    
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
     }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "scripts": ["background.js"]
+  }
 }
