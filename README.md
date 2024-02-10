@@ -40,9 +40,9 @@ For Mac:
 - **Increase Video Speed**: `MacCtrl + Shift + Period`
 - **Decrease Video Speed**: `MacCtrl + Shift + Comma`
 - **Activate Dynamic Speed**: `MacCtrl + Shift + Y`
-- **Jump to Preset Speed 1**: `MacCtrl + Ctrl + J`
-- **Jump to Preset Speed 2**: `MacCtrl + Ctrl + K`
-- **Jump to Preset Speed 3**: `MacCtrl + Ctrl + L`
+- **Jump to Preset Speed 1**: `Option + Shift + J`
+- **Jump to Preset Speed 2**: `Option + Shift + K`
+- **Jump to Preset Speed 3**: `Option + Shift + L`
 
 ## Settings
 
